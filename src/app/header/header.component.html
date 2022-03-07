@@ -1,0 +1,35 @@
+<div class="headerBackground">
+  <mat-grid-list cols="12" rowHeight="6rem">
+    <mat-grid-tile colspan="1">
+      <img src="/assets/images/hamburger-menu.png" alt="image" />
+    </mat-grid-tile>
+
+    <mat-grid-tile colspan="4" class="appNameTile">
+      <span
+        ><img src="/assets/images/logo-atlas.png" class="atlasLogo" alt="image"
+      /></span>
+      <span class="appName">ATLAS PRICING ENGINE</span>
+    </mat-grid-tile>
+
+    <mat-grid-tile colspan="2"></mat-grid-tile>
+
+    <mat-grid-tile colspan="2" matGridTile>
+      <span class="dark">DARK</span>
+      <mat-slide-toggle [formControl]="toggleControl"> </mat-slide-toggle>
+      <span class="light">LIGHT</span>
+    </mat-grid-tile>
+
+    <mat-grid-tile colspan="3">
+      <mat-card class="avatar-card">
+        <mat-card-header>
+          <div mat-card-avatar class="avatar-header-image"></div>
+          <div class="avatarCardWrapper">
+          <mat-card-title class="user-name">Travis Sharpe</mat-card-title>
+          <mat-card-subtitle class="user-designition">COO</mat-card-subtitle>
+        </div>
+          <mat-icon class="arrowDownIcon">keyboard_arrow_down</mat-icon>
+        </mat-card-header>
+      </mat-card>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>

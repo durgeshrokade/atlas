@@ -1,0 +1,20 @@
+<div>
+  <div class="bodySection bgColorWhiteCommon">
+    <mat-tab-group
+      mat-align-tabs="start"
+      (selectedIndexChange)="onTabChange($event)"
+    >
+      <div *ngFor="let singleSection of sections">
+        <mat-tab [label]="singleSection.labelValue">{{ "" }}</mat-tab>
+      </div>
+    </mat-tab-group>
+    <div>
+      <button mat-flat-button  color="primary" class="pricingButton">
+        Get Pricing
+      </button>
+    </div>
+  </div>
+  <div class="bodySection">
+    <app-section-tab [singleSectionTab]="tabDataToDisplay"></app-section-tab>
+  </div>
+</div>

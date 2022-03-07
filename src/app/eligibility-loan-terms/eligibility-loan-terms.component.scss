@@ -1,0 +1,63 @@
+table {
+    width: 100%;
+    max-height: 500px;
+    overflow: auto !important;
+  }
+
+.tabsContainer {
+    margin: auto;
+    width: 80%;
+    
+}
+
+.rangeCell {
+    color: #000000;
+    font-weight: 600;
+}
+
+.blackShade {
+    color: #000000;
+}
+
+.warningIcon {
+    color: red ;
+}
+
+.warningMessageBg {
+    background: #FDDFDF75;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    margin: auto;
+    width: 90%;
+    margin-top: 10px;
+}
+
+.message {
+    margin-top: 5px;
+    margin-left: 20px;
+}
+
+.borderBottomTabs {
+    border-bottom: 1px solid #CECECE;
+}
+
+.spaceBeforeTable {
+    margin: 15px 15px 0 15px;
+}
+
+::ng-deep tr.mat-header-row {
+    height: 39px !important;
+}
+
+.minHeightPadding {
+    min-height: 400px;
+  }
+
+::ng-deep  td.mat-cell:first-of-type {
+    text-align: left;
+}
+
+::ng-deep  tr.mat-row {
+    height: 30px !important;
+}

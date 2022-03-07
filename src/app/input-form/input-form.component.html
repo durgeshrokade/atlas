@@ -1,0 +1,45 @@
+<div class="bgColorWhiteCommon minHeightPadding">
+  <label class="formLabel">{{ inputFormData.label }}</label>
+
+  <div class="items">
+    <div *ngFor="let inputField of inputFormData.inputRecordsToAccept">
+      <div [ngSwitch]="inputField.type">
+        <div *ngSwitchCase="'number'" class="inputField">
+          <label class="label">{{ inputField.label }}</label>
+          <mat-form-field appearance="outline">
+            <input matInput type="number" value="inputField.valueToBind" />
+          </mat-form-field>
+        </div>
+
+        <div *ngSwitchCase="'dropdown'" class="inputField">
+          <label class="label">{{ inputField.label }}</label>
+          <mat-form-field appearance="outline">
+            <mat-select>
+              <mat-option
+                value="val"
+                *ngFor="let valueToDisplay of inputField.valueToBind"
+                >{{ valueToDisplay }}</mat-option
+              >
+            </mat-select>
+          </mat-form-field>
+        </div>
+
+        <div *ngSwitchCase="'currency'" class="inputField">
+          <label class="label">{{ inputField.label }}</label>
+          <mat-form-field appearance="outline">
+            <input matInput type="number" placeholder="0" />
+            <span matPrefix>$&nbsp;</span>
+          </mat-form-field>
+        </div>
+
+        <div *ngSwitchCase="'percent'" class="inputField">
+          <label class="label">{{ inputField.label }}</label>
+          <mat-form-field appearance="outline">
+            <input matInput type="number" placeholder="0" />
+            <span matSuffix>%&nbsp;</span>
+          </mat-form-field>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,20 @@
+
+<div class="formsWrapper">
+  <div
+    *ngFor="let singleForm of singleSectionTab.inputFormsToAccept"
+    class="singleFormWrapper"
+  >
+    <div>
+      <app-input-form [inputFormData]="singleForm"></app-input-form>
+    </div>
+  </div>
+  <div class="singleFormWrapper">
+    <app-rate-stack></app-rate-stack>
+  </div>
+  <div class="singleFormWrapper">
+    <app-eligibility-loan-terms></app-eligibility-loan-terms>
+  </div>
+  <div class="singleFormWrapper">
+    <app-calculated-values></app-calculated-values>
+  </div>
+</div>

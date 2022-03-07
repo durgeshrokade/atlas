@@ -1,0 +1,70 @@
+.minHeightPadding {
+  min-height: 400px;
+  padding: 0 15px;
+}
+
+table {
+  width: 100%;
+  max-height: 500px;
+  overflow: auto !important;
+}
+
+::ng-deep .mat-cell {
+  // text-align: left;
+  color: #000000;
+  font-weight: 500;
+  line-height: 16px;
+  font-size: 12px;
+}
+
+::ng-deep th.mat-header-cell {
+  text-align: center !important;
+  font-weight: 600;
+  color: #000000;
+}
+
+::ng-deep tr.mat-header-row {
+  background-color: #d4e5f4;
+}
+
+::ng-deep tr.mat-row, tr.mat-header-row {
+    height: 38.63px !important;
+}
+
+.tableHeaderLabel {
+    padding-top: 15px;
+}
+
+::ng-deep th.mat-header-cell:first-of-type,
+td.mat-cell:first-of-type,
+td.mat-footer-cell:first-of-type {
+  padding-left: 10px !important;
+}
+
+::ng-deep th.mat-header-cell:last-of-type,
+td.mat-cell:last-of-type,
+td.mat-footer-cell:last-of-type {
+  padding-right: 10px !important;
+}
+
+.flexDisplay {
+    display: flex;
+}
+
+.flexOne {
+    flex: 1;
+}
+
+.ioSwitch {
+    flex: 1;
+    margin: auto;
+    text-align: right;
+    padding-right: 10px;
+}
+
+.ioText {
+    font-size: 14px;
+    padding-right: 10px;
+    color: #727272;
+    font-weight: 600;
+}

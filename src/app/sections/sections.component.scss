@@ -1,0 +1,29 @@
+::ng-deep .mat-tab-label {
+  font-size: 14px !important;
+  font-weight: 600;
+}
+
+::ng-deep .mat-tab-label.mat-tab-label-active {
+  padding: 5px;
+  background-color: transparent;
+  color: #287cf2;
+  font-size: 14px !important;
+  font-weight: 600;
+  opacity: 1;
+}
+
+::ng-deep .mat-tab-label-content {
+  font-size: 14px !important;
+}
+
+.bodySection {
+  padding: 0 15px;
+}
+
+.pricingButton {
+  position: absolute;
+  right: 0;
+  top: 80px;
+  margin-right: 20px;
+  font-weight: 600;
+}
