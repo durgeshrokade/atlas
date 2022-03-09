@@ -11,6 +11,9 @@ export class InputFormComponent implements OnInit {
   @Input()
   inputFormData: InputForm = {} as InputForm;
 
+  @Input()
+  isDarkThemeEnabled: boolean = false;
+  
   constructor() {
     
    }

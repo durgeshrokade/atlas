@@ -8,18 +8,12 @@ export interface SingleSectionName {
 export interface SingleSectionTab {
     singleSectionName: SingleSectionName;
     inputFormsToAccept: InputForm[];
-    ViewOnlyFormsToAccept: ViewOnlyForm[];
 }
 
 // single input form in the tab
 export interface InputForm {
     label: string;
     inputRecordsToAccept: RecordInput[];
-}
-
-// single view only form in the tab
-export interface ViewOnlyForm {
-    viewOnlyRecordsToShow: ViewRecordsForm[];
 }
 
 // single record input in the form

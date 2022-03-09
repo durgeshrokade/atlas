@@ -1,4 +1,4 @@
-<div class="bgColorWhiteCommon minHeightPadding">
+<div class="minHeightPadding" [ngClass]="!isDarkThemeEnabled ? 'bgColorWhiteCommon': 'darkBgShade3'">
   <label class="formLabel">{{ inputFormData.label }}</label>
 
   <div class="items">

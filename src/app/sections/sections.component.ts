@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { data } from '../data/ui-metadata';
 import { SingleSectionName, SingleSectionTab } from '../shared/interfaces';
 
@@ -12,6 +12,9 @@ export class SectionsComponent implements OnInit {
   selectedTab: number = 0;
   tabDataToDisplay: SingleSectionTab = {} as SingleSectionTab;
 
+  @Input()
+  isDarkThemeEnabled: boolean = false;
+  
   constructor() {}
 
   ngOnInit(): void {

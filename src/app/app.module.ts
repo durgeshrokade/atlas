@@ -27,6 +27,8 @@ import { RateStackComponent } from './rate-stack/rate-stack.component';
 import { EligibilityLoanTermsComponent } from './eligibility-loan-terms/eligibility-loan-terms.component';
 import { CalculatedValuesComponent } from './calculated-values/calculated-values.component';
 import {MatTableModule} from '@angular/material/table';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import { SideNavComponent } from './side-nav/side-nav.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +41,8 @@ import {MatTableModule} from '@angular/material/table';
     DisplayFormComponent,
     RateStackComponent,
     EligibilityLoanTermsComponent,
-    CalculatedValuesComponent
+    CalculatedValuesComponent,
+    SideNavComponent
   ],
   imports: [
     BrowserModule,
@@ -58,7 +61,8 @@ import {MatTableModule} from '@angular/material/table';
     MatGridListModule,
     MatTabsModule,
     MatSelectModule,
-    MatTableModule
+    MatTableModule,
+    MatSidenavModule
   ],
   providers: [],
   bootstrap: [AppComponent]

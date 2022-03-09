@@ -10,7 +10,6 @@ table {
 }
 
 ::ng-deep .mat-cell {
-  // text-align: left;
   color: #000000;
   font-weight: 500;
   line-height: 16px;
@@ -67,4 +66,12 @@ td.mat-footer-cell:last-of-type {
     padding-right: 10px;
     color: #727272;
     font-weight: 600;
+}
+
+::ng-deep .darkMode .mat-table {
+  background: #1A202A;
+}
+
+td.mat-cell:first-of-type {
+  text-align: unset;  
 }

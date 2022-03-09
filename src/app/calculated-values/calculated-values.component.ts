@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-calculated-values',
@@ -6,7 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./calculated-values.component.scss']
 })
 export class CalculatedValuesComponent implements OnInit {
-
+  @Input() isDarkThemeEnabled:boolean = false;
+  
   constructor() { }
 
   ngOnInit(): void {

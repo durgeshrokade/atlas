@@ -5,19 +5,13 @@ table {
   }
 
 .tabsContainer {
-    margin: auto;
-    width: 80%;
-    
+    margin-left: 10px;
 }
 
 .rangeCell {
-    color: #000000;
     font-weight: 600;
 }
 
-.blackShade {
-    color: #000000;
-}
 
 .warningIcon {
     color: red ;
@@ -36,10 +30,6 @@ table {
 .message {
     margin-top: 5px;
     margin-left: 20px;
-}
-
-.borderBottomTabs {
-    border-bottom: 1px solid #CECECE;
 }
 
 .spaceBeforeTable {

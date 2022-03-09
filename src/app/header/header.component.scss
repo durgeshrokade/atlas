@@ -15,14 +15,12 @@
 
 .dark {
   font-size: 10px;
-  color: #A1A1A1;
   padding: 5px;
   opacity: 0.5;
 }
 
 .light {
   font-size: 10px;
-  color: #000000;
   padding: 5px;
 }
 
@@ -45,7 +43,8 @@ tr.mat-footer-row {
   padding: 5px;
   height: 46px;
   border-radius: 35px;
-  // background-color: #FFFFFF;
+  background: unset;
+  color: unset;
 }
 
 .avatar-header-image {
@@ -59,16 +58,15 @@ tr.mat-footer-row {
 .user-name {
   font-size: 15px;
   line-height: 24px;
-  // color: #364150;
   margin-bottom: 0px !important;
   font-weight: 600;
 }
 
 .user-designition {
-  // color: #364150;
   font-weight: 400;
   font-size: 12px;
   padding-top: 5px;
+  color: unset;
 } 
 
 .arrowDownIcon {
@@ -83,5 +81,11 @@ tr.mat-footer-row {
 
 
 ::ng-deep mat-grid-tile[matGridTile] .mat-grid-tile-content {
-  justify-content: end !important;
+  // margin-left: 40px;
+  justify-content: flex-end;
+  margin-right: 20px;
+}
+
+::ng-deep mat-grid-tile.appNameTile > div {
+  width: 70%;
 }

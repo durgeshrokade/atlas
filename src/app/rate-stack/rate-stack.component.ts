@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-rate-stack',
@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./rate-stack.component.scss']
 })
 export class RateStackComponent implements OnInit {
+  @Input() isDarkThemeEnabled:boolean = false;
 
   dataSource: any;
   displayedColumns : string[] = [];

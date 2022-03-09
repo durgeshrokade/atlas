@@ -2,7 +2,6 @@ import { Component, HostBinding, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { MatDialog } from '@angular/material/dialog';
 import { SampleDialogComponent } from './sample-dialog/sample-dialog.component';
-import { OverlayContainer } from '@angular/cdk/overlay';
 
 @Component({
   selector: 'app-root',
@@ -10,31 +9,21 @@ import { OverlayContainer } from '@angular/cdk/overlay';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-  title = 'Angular material dark mode';
-
-  @HostBinding('class') className = '';
+  isToggled: boolean = false;
+  isDarkThemeChosen: boolean = false;
 
   toggleControl = new FormControl(false);
 
-  constructor(private dialog: MatDialog, private overlay: OverlayContainer) { }
+  constructor(private dialog: MatDialog) { }
 
   ngOnInit(): void {
-    this.toggleControl.valueChanges.subscribe((darkMode) => {
-      const darkClassName = 'darkMode';
-      this.className = darkMode ? darkClassName : '';
-      if (darkMode) {
-        this.overlay.getContainerElement().classList.add(darkClassName);
-      } else {
-        this.overlay.getContainerElement().classList.remove(darkClassName);
-      }
-    });
   }
 
-  showDialog(): void {
-    this.dialog.open(SampleDialogComponent,
-      {
-        width: '500px'
-      });
+  onToggle() {
+    this.isToggled = !this.isToggled;
   }
 
+  onThemeToggle() {
+    this.isDarkThemeChosen = !this.isDarkThemeChosen;
+  }
 }

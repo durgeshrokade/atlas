@@ -1,15 +1,7 @@
-import { Component, HostBinding, OnInit } from '@angular/core';
+import { Component, EventEmitter, HostBinding, Inject, OnInit, Output, Renderer2 } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { OverlayContainer } from '@angular/cdk/overlay';
-
-
-export interface Tile {
-  color: string;
-  cols: number;
-  rows: number;
-  text: string;
-}
-
+import { DOCUMENT } from '@angular/common';
 
 @Component({
   selector: 'app-header',
@@ -17,31 +9,39 @@ export interface Tile {
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-  tiles: Tile[] = [
-    {text: 'One', cols: 2, rows: 1, color: 'lightblue'},
-    {text: 'Two', cols: 4, rows: 2, color: 'lightgreen'},
-    {text: 'Three', cols: 2, rows: 1, color: 'lightpink'},
-    {text: 'Four', cols: 4, rows: 1, color: '#DDBDF1'},
-  ];
+  @Output()
+  toggleEmitter = new EventEmitter();
+
+  @Output()
+  themeToggleEmitter = new EventEmitter();
 
   @HostBinding('class') className = '';
   toggleControl = new FormControl(false);
 
-  
-  constructor(private overlay: OverlayContainer) { }
+  showArrow: boolean = false;
+
+  constructor(private overlay: OverlayContainer, @Inject(DOCUMENT) private document: Document,
+    private renderer: Renderer2) { }
 
   ngOnInit(): void {
     this.toggleControl.valueChanges.subscribe((darkMode) => {
       const darkClassName = 'darkMode';
       this.className = darkMode ? darkClassName : '';
       if (darkMode) {
+        this.renderer.setAttribute(this.document.body, 'class', 'darkMode');
         this.overlay.getContainerElement().classList.add(darkClassName);
+        this.themeToggleEmitter.emit("");
       } else {
+        this.renderer.removeAttribute(this.document.body, 'class');
         this.overlay.getContainerElement().classList.remove(darkClassName);
+        this.themeToggleEmitter.emit("");
       }
     });
   }
 
-  
+  toggleSideNav() {
+    this.toggleEmitter.emit("");
+    this.showArrow = !this.showArrow;
+  }
 
 }

@@ -5,16 +5,16 @@
     class="singleFormWrapper"
   >
     <div>
-      <app-input-form [inputFormData]="singleForm"></app-input-form>
+      <app-input-form [inputFormData]="singleForm" [isDarkThemeEnabled]="isDarkThemeEnabled"></app-input-form>
     </div>
   </div>
   <div class="singleFormWrapper">
-    <app-rate-stack></app-rate-stack>
+    <app-rate-stack [isDarkThemeEnabled]="isDarkThemeEnabled"></app-rate-stack>
   </div>
   <div class="singleFormWrapper">
-    <app-eligibility-loan-terms></app-eligibility-loan-terms>
+    <app-eligibility-loan-terms [isDarkThemeEnabled]="isDarkThemeEnabled"></app-eligibility-loan-terms>
   </div>
   <div class="singleFormWrapper">
-    <app-calculated-values></app-calculated-values>
+    <app-calculated-values [isDarkThemeEnabled]="isDarkThemeEnabled"></app-calculated-values>
   </div>
 </div>
