@@ -1,7 +1,6 @@
 import { Component, HostBinding, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { MatDialog } from '@angular/material/dialog';
-import { SampleDialogComponent } from './sample-dialog/sample-dialog.component';
 
 @Component({
   selector: 'app-root',
