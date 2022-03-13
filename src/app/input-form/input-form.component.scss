@@ -20,7 +20,7 @@
 
 .minHeightPadding {
     min-height: 400px;
-    padding: 15px;
+    padding: 10px;
 }
 
 
@@ -39,3 +39,7 @@
 ::ng-deep .mat-form-field-appearance-outline .mat-select-arrow-wrapper {
     transform: unset !important;
 }
+
+::ng-deep .mat-form-field {
+    width: 95px !important;
+  }

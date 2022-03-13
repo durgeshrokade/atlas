@@ -16,24 +16,23 @@ export class HeaderComponent implements OnInit {
   themeToggleEmitter = new EventEmitter();
 
   @HostBinding('class') className = '';
-  toggleControl = new FormControl(false);
+  toggleControl = new FormControl(true);
 
   showArrow: boolean = false;
 
-  constructor(private overlay: OverlayContainer, @Inject(DOCUMENT) private document: Document,
+  constructor(@Inject(DOCUMENT) private document: Document,
     private renderer: Renderer2) { }
 
   ngOnInit(): void {
-    this.toggleControl.valueChanges.subscribe((darkMode) => {
+    this.toggleControl.valueChanges.subscribe((lightMode) => {
       const darkClassName = 'darkMode';
-      this.className = darkMode ? darkClassName : '';
-      if (darkMode) {
-        this.renderer.setAttribute(this.document.body, 'class', 'darkMode');
-        this.overlay.getContainerElement().classList.add(darkClassName);
+      this.className = lightMode ? darkClassName : '';
+      if (!lightMode) {
+        this.renderer.setAttribute(this.document.body, 'class', 'darkMode my-dark-style');
         this.themeToggleEmitter.emit("");
       } else {
         this.renderer.removeAttribute(this.document.body, 'class');
-        this.overlay.getContainerElement().classList.remove(darkClassName);
+        this.renderer.setAttribute(this.document.body, 'class', 'my-light-style');
         this.themeToggleEmitter.emit("");
       }
     });

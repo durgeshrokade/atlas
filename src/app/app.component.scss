@@ -1,5 +1,7 @@
+@use '@angular/material' as mat;
+
 ::ng-deep .mat-app-background {
-  background-color: #F5F9FA;
+  // background-color: #F5F9FA;
 }
 
 ::ng-deep .mat-tab-header {
@@ -18,3 +20,4 @@
 ::ng-deep .mat-drawer {
   background-color: unset;
 }
+

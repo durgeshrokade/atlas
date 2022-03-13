@@ -1,5 +1,6 @@
 <div>
-  <div class="bodySection" [ngClass]="isDarkThemeEnabled ? 'darkBgShade2':'bgColorWhiteCommon'">
+  
+  <div class="bodySection commonBgThemeBased bgTabCommon paddingLeft5Percent">
     <mat-tab-group
       mat-align-tabs="start"
       (selectedIndexChange)="onTabChange($event)"
@@ -14,7 +15,8 @@
       </button>
     </div>
   </div>
-  <div class="bodySection" [ngClass]="!isDarkThemeEnabled ? 'commonBgColor': ''">
-    <app-section-tab [singleSectionTab]="tabDataToDisplay" [isDarkThemeEnabled]="isDarkThemeEnabled"></app-section-tab>
+  <div class="bodySection">
+    <app-section-tab [singleSectionTab]="tabDataToDisplay"></app-section-tab>
   </div>
+
 </div>
