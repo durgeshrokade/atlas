@@ -13,24 +13,11 @@
   margin: 0px 25px;
 }
 
-.dark {
-  font-size: 10px;
-  padding: 5px;
-  opacity: 0.5;
-}
-
-.light {
-  font-size: 10px;
-  padding: 5px;
-}
 
 .appNameTile {
   left: unset !important;
 }
 
-.headerBackground {
-  background-color: variables.$primary-background-light;
-}
 
 tr.mat-footer-row {
   border: 1px solid #e7e7e7;
@@ -45,6 +32,7 @@ tr.mat-footer-row {
   border-radius: 35px;
   background: unset;
   color: unset;
+  margin-left: 35px;
 }
 
 .avatar-header-image {
@@ -67,7 +55,7 @@ tr.mat-footer-row {
   font-size: 12px;
   padding-top: 5px;
   color: unset;
-} 
+}
 
 .arrowDownIcon {
   font-size: 30px;
@@ -79,7 +67,6 @@ tr.mat-footer-row {
   margin: 0 15px 0px -15px;
 }
 
-
 ::ng-deep mat-grid-tile[matGridTile] .mat-grid-tile-content {
   // margin-left: 40px;
   justify-content: flex-end;
@@ -88,4 +75,7 @@ tr.mat-footer-row {
 
 ::ng-deep mat-grid-tile.appNameTile > div {
   width: 70%;
+  display: flex;
+  justify-content: flex-start;
+  margin-left: 50px;
 }

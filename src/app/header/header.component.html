@@ -1,4 +1,4 @@
-<div ngClass="darkMode ? 'headerBackground' : ''">
+  <div>
   <mat-grid-list cols="12" rowHeight="6rem">
     <mat-grid-tile colspan="6" class="appNameTile">
       <div (click)="toggleSideNav()">
@@ -10,9 +10,9 @@
     </mat-grid-tile>
     <mat-grid-tile colspan="1"></mat-grid-tile>
     <mat-grid-tile colspan="5" matGridTile>
-      <span class="light">LIGHT</span>
-      <mat-slide-toggle [formControl]="toggleControl"> </mat-slide-toggle>
       <span class="dark">DARK</span>
+      <mat-slide-toggle [formControl]="toggleControl" themeToggle> </mat-slide-toggle>
+      <span class="light">LIGHT</span>
       <mat-card class="avatar-card">
         <mat-card-header>
           <div mat-card-avatar class="avatar-header-image"></div>

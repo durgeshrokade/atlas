@@ -6,7 +6,6 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./eligibility-loan-terms.component.scss'],
 })
 export class EligibilityLoanTermsComponent implements OnInit {
-  @Input() isDarkThemeEnabled:boolean = false;
 
   tabsToShow: string[] = ['Eligibility', 'Messages'];
   dataToLoad: any = [];

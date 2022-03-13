@@ -5,9 +5,9 @@
         <app-side-nav [isToggled]="isToggled"></app-side-nav>
       </div>
     </mat-drawer>
-    <div>
+    <div class="mat-app-background">
       <app-header (toggleEmitter)="onToggle();" (themeToggleEmitter)="onThemeToggle()"></app-header>
-      <app-sections [isDarkThemeEnabled]="isDarkThemeChosen"></app-sections>
+      <app-sections></app-sections>
     </div>
   </mat-drawer-container>
 </div>

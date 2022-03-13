@@ -3,14 +3,14 @@
   font-weight: 600;
 }
 
-::ng-deep .mat-tab-label.mat-tab-label-active {
-  padding: 5px;
-  background-color: transparent;
-  color: #287cf2;
-  font-size: 14px !important;
-  font-weight: 600;
-  opacity: 1;
-}
+// ::ng-deep .mat-tab-label.mat-tab-label-active {
+//   padding: 5px;
+//   background-color: transparent;
+//   // color: #287cf2;
+//   font-size: 14px !important;
+//   font-weight: 600;
+//   opacity: 1;
+// }
 
 ::ng-deep .mat-tab-label-content {
   font-size: 14px !important;
@@ -29,5 +29,9 @@
 }
 
 .commonBgColor {
-  background-color: #F5F9FA;
+  // background-color: #F5F9FA;
+}
+
+.paddingLeft5Percent {
+  padding-left: 75px;
 }

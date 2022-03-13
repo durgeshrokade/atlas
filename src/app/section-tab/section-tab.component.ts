@@ -11,9 +11,7 @@ export class SectionTabComponent implements OnInit {
   @Input()
   singleSectionTab: SingleSectionTab = {} as SingleSectionTab;
 
-  @Input()
-  isDarkThemeEnabled: boolean = false;
-
+  
   constructor() { }
 
   ngOnInit(): void {

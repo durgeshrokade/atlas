@@ -12,9 +12,6 @@ export class SectionsComponent implements OnInit {
   selectedTab: number = 0;
   tabDataToDisplay: SingleSectionTab = {} as SingleSectionTab;
 
-  @Input()
-  isDarkThemeEnabled: boolean = false;
-  
   constructor() {}
 
   ngOnInit(): void {
