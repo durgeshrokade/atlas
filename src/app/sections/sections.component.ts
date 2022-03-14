@@ -12,6 +12,9 @@ export class SectionsComponent implements OnInit {
   selectedTab: number = 0;
   tabDataToDisplay: SingleSectionTab = {} as SingleSectionTab;
 
+  @Input()
+  isToggled:boolean = false;
+
   constructor() {}
 
   ngOnInit(): void {

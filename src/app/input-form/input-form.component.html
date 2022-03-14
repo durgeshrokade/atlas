@@ -6,14 +6,14 @@
       <div [ngSwitch]="inputField.type">
         <div *ngSwitchCase="'number'" class="inputField">
           <label class="label inputFieldLabelCommon">{{ inputField.label }}</label>
-          <mat-form-field appearance="outline">
+          <mat-form-field appearance="outline" [ngClass]="isToggled ? 'width93Px': 'width105Px'">
             <input matInput type="number" value="inputField.valueToBind" />
           </mat-form-field>
         </div>
 
         <div *ngSwitchCase="'dropdown'" class="inputField">
           <label class="label inputFieldLabelCommon">{{ inputField.label }}</label>
-          <mat-form-field appearance="outline">
+          <mat-form-field appearance="outline" [ngClass]="isToggled ? 'width93Px': 'width105Px'">
             <mat-select>
               <mat-option
                 value="val"
@@ -26,7 +26,7 @@
 
         <div *ngSwitchCase="'currency'" class="inputField">
           <label class="label inputFieldLabelCommon">{{ inputField.label }}</label>
-          <mat-form-field appearance="outline">
+          <mat-form-field appearance="outline" [ngClass]="isToggled ? 'width93Px': 'width105Px'">
             <input matInput type="number" placeholder="0" />
             <span matPrefix>$&nbsp;</span>
           </mat-form-field>
@@ -34,7 +34,7 @@
 
         <div *ngSwitchCase="'percent'" class="inputField">
           <label class="label inputFieldLabelCommon">{{ inputField.label }}</label>
-          <mat-form-field appearance="outline">
+          <mat-form-field appearance="outline" [ngClass]="isToggled ? 'width93Px': 'width105Px'">
             <input matInput type="number" placeholder="0" />
             <span matSuffix>%&nbsp;</span>
           </mat-form-field>

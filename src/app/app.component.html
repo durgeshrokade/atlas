@@ -7,7 +7,7 @@
     </mat-drawer>
     <div class="mat-app-background">
       <app-header (toggleEmitter)="onToggle();" (themeToggleEmitter)="onThemeToggle()"></app-header>
-      <app-sections></app-sections>
+      <app-sections [isToggled]="isToggled"></app-sections>
     </div>
   </mat-drawer-container>
 </div>

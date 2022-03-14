@@ -11,6 +11,8 @@ export class SectionTabComponent implements OnInit {
   @Input()
   singleSectionTab: SingleSectionTab = {} as SingleSectionTab;
 
+  @Input()
+  isToggled: boolean = false;
   
   constructor() { }
 
