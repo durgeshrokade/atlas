@@ -139,7 +139,7 @@ $darkthemesecondary: (
   ),
 );
 
-// Define a light theme
+// Defining a light theme
 $light-primary: mat.define-palette($atlas-t);
 $light-accent: mat.define-palette($atlas-t2);
 $light-theme: mat.define-light-theme(
@@ -151,7 +151,7 @@ $light-theme: mat.define-light-theme(
   )
 );
 
-// Define a dark theme
+// Defining a dark theme
 $dark-primary: mat.define-palette($darkthemeprimary);
 $dark-accent: mat.define-palette($darkthemesecondary);
 $dark-theme: mat.define-dark-theme(
@@ -213,17 +213,22 @@ $dark-theme: mat.define-dark-theme(
   .dark {
     font-size: 10px;
     padding: 5px;
-    color: #A1A1A1;
+    color: #a1a1a1;
   }
-  
+
   .light {
     font-size: 10px;
     color: #000000;
     padding: 5px;
   }
-  
+
   .mat-card {
-    background-color: #FFFFFF !important;
+    background-color: #ffffff !important;
+  }
+
+  .mat-slide-toggle[ioToggle].mat-checked:not(.mat-disabled)
+    .mat-slide-toggle-bar {
+    background-color: #287cf2;
   }
 }
 
@@ -301,9 +306,9 @@ $dark-theme: mat.define-dark-theme(
   .dark {
     font-size: 10px;
     padding: 5px;
-    color: #FFFFFF;
+    color: #ffffff;
   }
-  
+
   .light {
     font-size: 10px;
     color: #727272;
@@ -311,9 +316,13 @@ $dark-theme: mat.define-dark-theme(
   }
 
   .mat-card {
-    background-color: #2D3B50 !important;
+    background-color: #2d3b50 !important;
   }
-  
+
+  .mat-slide-toggle[ioToggle].mat-checked:not(.mat-disabled)
+    .mat-slide-toggle-bar {
+    background-color: #a8c150;
+  }
 }
 
 .formLabel {
@@ -391,7 +400,7 @@ div[role="tab"] {
   background-color: black;
 }
 
-.mat-slide-toggle.mat-checked .mat-slide-toggle-thumb, .mat-slide-toggle.mat-checked .mat-slide-toggle-thumb {
+.mat-slide-toggle.mat-checked .mat-slide-toggle-thumb,
+.mat-slide-toggle.mat-checked .mat-slide-toggle-thumb {
   background-color: white !important;
 }
-

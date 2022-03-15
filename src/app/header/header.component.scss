@@ -11,6 +11,8 @@
 
 .atlasLogo {
   margin: 0px 25px;
+  width: 43px;
+  height: 42px;
 }
 
 
@@ -68,7 +70,6 @@ tr.mat-footer-row {
 }
 
 ::ng-deep mat-grid-tile[matGridTile] .mat-grid-tile-content {
-  // margin-left: 40px;
   justify-content: flex-end;
   margin-right: 20px;
 }
