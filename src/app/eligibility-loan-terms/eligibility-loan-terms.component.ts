@@ -24,6 +24,7 @@ export class EligibilityLoanTermsComponent implements OnInit {
         purchase: '80%',
         rateTerm: '80%',
         cashout: '75%',
+        highlight: true
       },
       {
         range: '720-739',

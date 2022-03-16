@@ -24,7 +24,7 @@
       <ng-container matColumnDef="purchase">
         <th mat-header-cell *matHeaderCellDef>Purchase</th>
         <td mat-cell *matCellDef="let element" class="blackShade">
-          {{ element.purchase }}
+          <span [ngClass]="element.highlight ? 'commonBg highlightPadding':''">{{ element.purchase }}</span>
         </td>
       </ng-container>
 

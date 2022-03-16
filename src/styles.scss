@@ -243,7 +243,11 @@ $dark-theme: mat.define-dark-theme(
   .calcDLabel {
     color: #727272;
     text-align: left;
-}
+  }
+
+  .commonBg {
+    background-color: #1BD492;
+  }
     
 }
 
@@ -351,6 +355,10 @@ $dark-theme: mat.define-dark-theme(
   button.secondary-button {
     color: #a8c150 !important;
     border-color: #a8c150 !important;
+  }
+
+  .commonBg {
+    background-color: #A8C150;
   }
 }
 
