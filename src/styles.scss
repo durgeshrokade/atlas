@@ -230,6 +230,21 @@ $dark-theme: mat.define-dark-theme(
     .mat-slide-toggle-bar {
     background-color: #287cf2;
   }
+
+  .mat-table thead {
+    background: #D4E5F4;
+  }
+
+  button.secondary-button {
+    color: #287cf2 !important;
+    border-color: #287cf2 !important;
+  }
+
+  .calcDLabel {
+    color: #727272;
+    text-align: left;
+}
+    
 }
 
 .my-dark-style {
@@ -322,6 +337,20 @@ $dark-theme: mat.define-dark-theme(
   .mat-slide-toggle[ioToggle].mat-checked:not(.mat-disabled)
     .mat-slide-toggle-bar {
     background-color: #a8c150;
+  }
+
+  .mat-header-cell {
+    color: #FFFFFF;
+  }
+
+  button.secondary-button {
+    color: #a8c150 !important;
+    border-color: #a8c150 !important;
+  }
+
+  button.secondary-button {
+    color: #a8c150 !important;
+    border-color: #a8c150 !important;
   }
 }
 

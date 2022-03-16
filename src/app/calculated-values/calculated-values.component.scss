@@ -10,11 +10,6 @@
     border: 1px solid #CECECE;
 }
 
-.calcDLabel {
-    // color: #727272;
-    text-align: left;
-}
-
 .calcDValue {
     font-size: 14px;
     font-weight: 600;
@@ -29,13 +24,12 @@
 }
 
 .gridListWrapper {
-    border: 2px solid #CECECE;
-    border-radius: 4px;
     margin-top: 20px;
+    padding: 0 20px;
+    // margin-bottom: 175px;
 }
 
 .calcLabel2 {
-    // color: #364150;
     font-size: 14px;
     font-weight: 600;
     display: flex;
@@ -61,7 +55,7 @@
 }
 
 .calculatedWrapper {
-    padding: 0 20px;
+    // padding: 0 20px;
     min-height: 400px;
 }
 
@@ -71,6 +65,25 @@
 
 .actionButtonWrapper {
     margin: 10px 0;
-    display: inline-flex;
-    gap: 20px;
+    position: absolute;
+    bottom: 40px;
+    display: flex;
+    justify-content: center;
+    width: 33%;
+}
+
+.topLeft {
+    border-top-left-radius: 4px;
+}
+
+.topRight {
+    border-top-right-radius: 4px;
+}
+
+.bottomLeft {
+    border-bottom-left-radius: 4px;
+}
+
+.bottomRight {
+    border-bottom-right-radius: 4px;
 }

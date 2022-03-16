@@ -45,12 +45,16 @@
       <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
     </table>
   </div>
-  <div *ngIf="selectedTabIndex === 1">
-    <div *ngFor="let singleMessage of messageToLoad">
-      <div class="warningMessageBg">
-        <div><mat-icon class="warningIcon">warning</mat-icon></div>
-        <div class="message">{{ singleMessage }}</div>
-      </div>
-    </div>
+  <div *ngIf="selectedTabIndex === 1" class="margin15Px">
+    <table mat-table [dataSource]="dataToLoadTab2">
+      <ng-container matColumnDef="message">
+        <th mat-header-cell *matHeaderCellDef>Message</th>
+        <td mat-cell *matCellDef="let element">
+          {{ element.message }}
+        </td>
+      </ng-container>
+      <tr mat-header-row *matHeaderRowDef="displayedColumnsTab2" messageTableHeader></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumnsTab2"></tr>
+    </table>
   </div>
 </div>

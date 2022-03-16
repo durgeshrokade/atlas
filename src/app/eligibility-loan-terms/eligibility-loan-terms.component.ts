@@ -10,8 +10,11 @@ export class EligibilityLoanTermsComponent implements OnInit {
   tabsToShow: string[] = ['Eligibility', 'Messages'];
   dataToLoad: any = [];
   messageToLoad: any = [];
+  dataToLoadTab2: any = [];
   selectedTabIndex: number = 0;
   displayedColumns: string[] = ["range", "purchase", "rateTerm", "cashout"];
+  displayedColumnsTab2: string[] = ["message"];
+
   constructor() {}
 
   ngOnInit(): void {
@@ -68,7 +71,20 @@ export class EligibilityLoanTermsComponent implements OnInit {
     this.messageToLoad.push(
       "FICO Score Should Be More Than 600",
       "FICO-2 Score Should Be More Than 600"
-    )
+    );
+
+    this.dataToLoadTab2.push(
+      {
+        message: "Credit Score is below the minimum for this product"
+      },
+      {
+        message: "DSCR is less than minimum allowed for all rates"
+      },
+      {
+        message: "Everything looks good."
+      }
+    );
+    
   }
 
   onTabChange(tabValue: number) {

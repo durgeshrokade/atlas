@@ -24,6 +24,8 @@ export class HeaderComponent implements OnInit {
     private renderer: Renderer2) { }
 
   ngOnInit(): void {
+    // this.renderer.setAttribute(this.document.body, 'class', 'darkMode my-dark-style');
+
     this.toggleControl.valueChanges.subscribe((lightMode) => {
       const darkClassName = 'darkMode';
       this.className = lightMode ? darkClassName : '';
