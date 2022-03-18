@@ -22,16 +22,34 @@
 
 .pricingButton {
   position: absolute;
-  right: 0;
-  top: 80px;
-  margin-right: 20px;
   font-weight: 600;
-}
-
-.commonBgColor {
-  // background-color: #F5F9FA;
+  display: flex;
+  gap: 25px;
+  right: 20px;
+  top: 80px;
 }
 
 .paddingLeft5Percent {
   padding-left: 75px;
+}
+
+.width93Px {
+  width: 93px !important;
+}
+
+.width105Px {
+  width: 105px !important;
+}
+
+.disabledDiv {
+  pointer-events: none;
+  opacity: 0.4;
+}
+
+::ng-deep mat-tab-group[topTabs] .mat-tab-header {
+  width: 50% !important;
+}
+
+.loanType {
+  width: 125px !important;
 }

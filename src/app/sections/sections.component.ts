@@ -11,6 +11,9 @@ export class SectionsComponent implements OnInit {
   sections: SingleSectionName[] = [];
   selectedTab: number = 0;
   tabDataToDisplay: SingleSectionTab = {} as SingleSectionTab;
+  typesOfLoan: string[] = ["New Loan", "Existing Loan"];
+  typeSelected:string = this.typesOfLoan[0];
+  atlasId:any;
 
   @Input()
   isToggled:boolean = false;
@@ -33,5 +36,12 @@ export class SectionsComponent implements OnInit {
 
   getTabDataByIndex(index: number = 0): SingleSectionTab {
     return data[index];
+  }
+
+  typeChanged(selectedLoanText: any) {
+    this.typeSelected = this.typesOfLoan.find( loan => loan.toLowerCase() === selectedLoanText.value.toLowerCase()) || '';
+
+    if (this.typeSelected === "New Loan") 
+      this.atlasId = '';
   }
 }

@@ -47,6 +47,7 @@ const getInputForms = () => {
     },
     {
       label: 'Property Details',
+      disabledDiv: true,
       inputRecordsToAccept: [
         {
           type: CommonConstants.dropdownType,
@@ -93,6 +94,7 @@ const getInputForms = () => {
     },
     {
       label: 'Property Economics',
+      disabledDiv: true,
       inputRecordsToAccept: [
         {
           type: CommonConstants.numberType,

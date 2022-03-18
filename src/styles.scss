@@ -248,7 +248,14 @@ $dark-theme: mat.define-dark-theme(
   .commonBg {
     background-color: #1BD492;
   }
-    
+
+  .singleProductWrapper[selected=true] {
+    border-left: 5px solid #287CF2;
+  }   
+
+  .borderTopCommon {
+    border-top: 1px solid #CECECE;
+  }
 }
 
 .my-dark-style {
@@ -359,6 +366,14 @@ $dark-theme: mat.define-dark-theme(
 
   .commonBg {
     background-color: #A8C150;
+  }
+
+  .singleProductWrapper[selected=true] {
+    border-left: 5px solid #A8C150;
+  }
+
+  .borderTopCommon {
+    border-top: 1px solid #FFFFFF;
   }
 }
 

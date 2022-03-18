@@ -14,6 +14,7 @@ export interface SingleSectionTab {
 export interface InputForm {
     label: string;
     inputRecordsToAccept: RecordInput[];
+    disabledDiv?: boolean;
 }
 
 // single record input in the form

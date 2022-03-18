@@ -1,4 +1,4 @@
-  <div class="minHeightPadding bgCommonInputForm">
+  <div class="minHeightPadding bgCommonInputForm" [ngClass]="inputFormData.disabledDiv ? 'disabledDiv' : ''">
   <label class="formLabel formNameLableCommon">{{ inputFormData.label }}</label>
 
   <div class="items">
