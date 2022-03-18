@@ -29,6 +29,8 @@ import { CalculatedValuesComponent } from './calculated-values/calculated-values
 import {MatTableModule} from '@angular/material/table';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import { SideNavComponent } from './side-nav/side-nav.component';
+import {MatTooltipModule} from '@angular/material/tooltip';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -63,7 +65,9 @@ import { SideNavComponent } from './side-nav/side-nav.component';
     MatSelectModule,
     MatTableModule,
     MatSidenavModule,
-    FormsModule
+    FormsModule,
+    MatTooltipModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -15,6 +15,7 @@ export interface InputForm {
     label: string;
     inputRecordsToAccept: RecordInput[];
     disabledDiv?: boolean;
+    twoColumnLayout?: boolean;
 }
 
 // single record input in the form
@@ -23,6 +24,7 @@ export interface RecordInput {
     label: string;
     isMandatory: boolean;
     valueToBind?: any;
+    infoMessage?: string;
 }
 
 // view only record TODO

@@ -5,19 +5,35 @@
     <div *ngFor="let inputField of inputFormData.inputRecordsToAccept">
       <div [ngSwitch]="inputField.type">
         <div *ngSwitchCase="'number'" class="inputField">
-          <label class="label inputFieldLabelCommon">{{ inputField.label }}</label>
-          <mat-form-field appearance="outline" [ngClass]="isToggled ? 'width93Px': 'width105Px'">
-            <input matInput type="number" value="inputField.valueToBind" />
+          <span class="whiteSpaceNoWrap">
+            <label class="label inputFieldLabelCommon">{{ inputField.label }}</label>
+            <span [matTooltip]="inputField.infoMessage"
+             *ngIf="inputField.infoMessage" [matTooltipPosition]="'below'">
+              <mat-icon class="infoIcon" >
+                info
+              </mat-icon>
+            </span>
+          </span>
+          <mat-form-field appearance="outline" [ngClass]="getClassToApply()">
+            <input matInput type="number" value="inputField.valueToBind" required />
           </mat-form-field>
         </div>
 
         <div *ngSwitchCase="'dropdown'" class="inputField">
-          <label class="label inputFieldLabelCommon">{{ inputField.label }}</label>
-          <mat-form-field appearance="outline" [ngClass]="isToggled ? 'width93Px': 'width105Px'">
-            <mat-select>
+          <span class="whiteSpaceNoWrap">
+            <label class="label inputFieldLabelCommon">{{ inputField.label }}</label>
+            <span [matTooltip]="inputField.infoMessage"
+            *ngIf="inputField.infoMessage" [matTooltipPosition]="'below'">
+             <mat-icon class="infoIcon" >
+               info
+             </mat-icon>
+           </span>
+          </span>
+          <mat-form-field appearance="outline" [ngClass]="getClassToApply()">
+            <mat-select [value]="inputField?.valueToBind?.[0] || ''">
               <mat-option
-                value="val"
                 *ngFor="let valueToDisplay of inputField.valueToBind"
+                [value]="valueToDisplay"
                 >{{ valueToDisplay }}</mat-option
               >
             </mat-select>
@@ -25,16 +41,32 @@
         </div>
 
         <div *ngSwitchCase="'currency'" class="inputField">
-          <label class="label inputFieldLabelCommon">{{ inputField.label }}</label>
-          <mat-form-field appearance="outline" [ngClass]="isToggled ? 'width93Px': 'width105Px'">
-            <input matInput type="number" placeholder="0" />
+          <span class="whiteSpaceNoWrap">
+            <label class="label inputFieldLabelCommon">{{ inputField.label }}</label>
+            <span [matTooltip]="inputField.infoMessage"
+            *ngIf="inputField.infoMessage" [matTooltipPosition]="'below'">
+             <mat-icon class="infoIcon" >
+               info
+             </mat-icon>
+           </span>
+          </span>
+          <mat-form-field appearance="outline" [ngClass]="getClassToApply()" >
+            <input matInput type="number" placeholder="0" required/>
             <span matPrefix>$&nbsp;</span>
           </mat-form-field>
         </div>
 
         <div *ngSwitchCase="'percent'" class="inputField">
-          <label class="label inputFieldLabelCommon">{{ inputField.label }}</label>
-          <mat-form-field appearance="outline" [ngClass]="isToggled ? 'width93Px': 'width105Px'">
+          <span class="whiteSpaceNoWrap">
+            <label class="label inputFieldLabelCommon">{{ inputField.label }}</label>
+            <span [matTooltip]="inputField.infoMessage"
+            *ngIf="inputField.infoMessage" [matTooltipPosition]="'below'">
+             <mat-icon class="infoIcon" >
+               info
+             </mat-icon>
+           </span>
+          </span>
+          <mat-form-field appearance="outline" [ngClass]="getClassToApply()">
             <input matInput type="number" placeholder="0" />
             <span matSuffix>%&nbsp;</span>
           </mat-form-field>
