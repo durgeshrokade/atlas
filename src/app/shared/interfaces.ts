@@ -16,6 +16,7 @@ export interface InputForm {
     inputRecordsToAccept: RecordInput[];
     disabledDiv?: boolean;
     twoColumnLayout?: boolean;
+    showUnits?: boolean;
 }
 
 // single record input in the form
@@ -25,6 +26,8 @@ export interface RecordInput {
     isMandatory: boolean;
     valueToBind?: any;
     infoMessage?: string;
+    selectedValueToBind?: any;
+    keyToRead?:string;
 }
 
 // view only record TODO

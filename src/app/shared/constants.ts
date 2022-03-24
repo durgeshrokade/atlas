@@ -3,5 +3,6 @@ export const CommonConstants = {
     dropdownType: "dropdown",
     currencyType: "currency",
     percentType: "percent",
-    textType: "text"
+    textType: "text",
+    dateType: "date"
 };

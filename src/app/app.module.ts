@@ -32,6 +32,7 @@ import { SideNavComponent } from './side-nav/side-nav.component';
 import {MatTooltipModule} from '@angular/material/tooltip';
 import { HttpClientModule } from '@angular/common/http';
 import { PropertyEconomicsOtherComponent } from './property-economics-other/property-economics-other.component';
+import {MatDatepickerModule} from '@angular/material/datepicker';
 
 @NgModule({
   declarations: [
@@ -70,6 +71,7 @@ import { PropertyEconomicsOtherComponent } from './property-economics-other/prop
     FormsModule,
     MatTooltipModule,
     HttpClientModule,
+    MatDatepickerModule
   ],
   providers: [],
   bootstrap: [AppComponent]
