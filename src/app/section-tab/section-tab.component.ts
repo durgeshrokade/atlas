@@ -18,5 +18,4 @@ export class SectionTabComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
 }

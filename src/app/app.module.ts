@@ -31,6 +31,8 @@ import {MatSidenavModule} from '@angular/material/sidenav';
 import { SideNavComponent } from './side-nav/side-nav.component';
 import {MatTooltipModule} from '@angular/material/tooltip';
 import { HttpClientModule } from '@angular/common/http';
+import { PropertyEconomicsOtherComponent } from './property-economics-other/property-economics-other.component';
+import {MatDatepickerModule} from '@angular/material/datepicker';
 
 @NgModule({
   declarations: [
@@ -44,7 +46,8 @@ import { HttpClientModule } from '@angular/common/http';
     RateStackComponent,
     EligibilityLoanTermsComponent,
     CalculatedValuesComponent,
-    SideNavComponent
+    SideNavComponent,
+    PropertyEconomicsOtherComponent
   ],
   imports: [
     BrowserModule,
@@ -68,6 +71,7 @@ import { HttpClientModule } from '@angular/common/http';
     FormsModule,
     MatTooltipModule,
     HttpClientModule,
+    MatDatepickerModule
   ],
   providers: [],
   bootstrap: [AppComponent]

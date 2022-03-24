@@ -21,10 +21,10 @@
         >
       </mat-select>
     </mat-form-field>
-    <mat-form-field appearance="outline" class="loanType" >
+    <mat-form-field appearance="outline" class="loanType">
       <input matInput type="number" placeholder="Enter Atlas ID" [disabled]="typeSelected !== 'Existing Loan'" [(ngModel)]="atlasId"/>
     </mat-form-field>
-    <button mat-flat-button  color="primary" >
+    <button mat-flat-button  color="primary" (click)="getPricingById()">
       Get Pricing
     </button>
   </div>
