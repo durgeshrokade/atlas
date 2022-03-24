@@ -17,6 +17,6 @@ export class SectionTabComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    console.log('labelValue:'+ this.singleSectionTab.singleSectionName.labelValue);
   }
-
 }

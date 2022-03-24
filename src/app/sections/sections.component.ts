@@ -24,7 +24,7 @@ export class SectionsComponent implements OnInit {
     this.sections = [
       { key: 'ltr', labelValue: 'LTR' },
       { key: 'bridgeLoan', labelValue: 'Bridge Loan' },
-      { key: 'fixAndFlip', labelValue: 'Fix & Flip' },
+      { key: 'rehab', labelValue: 'Rehab' },
     ];
 
     this.tabDataToDisplay = this.getTabDataByIndex(0);

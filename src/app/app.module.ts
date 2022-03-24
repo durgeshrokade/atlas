@@ -31,6 +31,7 @@ import {MatSidenavModule} from '@angular/material/sidenav';
 import { SideNavComponent } from './side-nav/side-nav.component';
 import {MatTooltipModule} from '@angular/material/tooltip';
 import { HttpClientModule } from '@angular/common/http';
+import { PropertyEconomicsOtherComponent } from './property-economics-other/property-economics-other.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +45,8 @@ import { HttpClientModule } from '@angular/common/http';
     RateStackComponent,
     EligibilityLoanTermsComponent,
     CalculatedValuesComponent,
-    SideNavComponent
+    SideNavComponent,
+    PropertyEconomicsOtherComponent
   ],
   imports: [
     BrowserModule,
